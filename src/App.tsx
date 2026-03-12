@@ -77,7 +77,6 @@ export default function App() {
           {!isMobile && <CustomCursor />}
           <AnimatedBackground />
           <ScrollProgress />
-          <div className="scan-line" />
           <Nav />
           <main>
             <Hero />

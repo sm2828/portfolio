@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -18,7 +18,7 @@ export default function Contact() {
           <p className="font-mono text-xs text-accent tracking-widest mb-3">05 / CONTACT</p>
           <div className="flex items-end gap-6">
             <h2 className="font-display text-[clamp(3rem,8vw,6rem)] leading-none text-text">
-              LET'S TALK
+              Reach Out
             </h2>
             <div className="hidden md:block h-px flex-1 bg-white/5 mb-4" />
           </div>
@@ -71,6 +71,23 @@ export default function Contact() {
                 </div>
                 <ArrowUpRight size={14} className="ml-auto text-muted group-hover:text-accent2 transition-colors" />
               </a>
+              <a
+                href="https://x.com/monadbull"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-hover
+                className="group flex items-center gap-4 p-5 glass border border-white/5 hover:border-accent2/30 transition-all duration-300"
+              >
+                <div className="p-2.5 border border-white/10 group-hover:border-accent2/30 text-muted group-hover:text-accent2 transition-all duration-300">
+                  <Twitter size={16} />
+                </div>
+                <div>
+                  <p className="font-mono text-xs text-muted mb-0.5">X</p>
+                  <p className="font-body text-sm text-text group-hover:text-accent2 transition-colors">x.com/monadbull</p>
+                </div>
+                <ArrowUpRight size={14} className="ml-auto text-muted group-hover:text-accent2 transition-colors" />
+              </a>
+
             </div>
           </motion.div>
 

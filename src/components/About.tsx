@@ -32,20 +32,18 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="font-body text-lg text-text/70 leading-relaxed mb-6">
-              I'm a full-stack developer focused on building modern web applications with strong 
-              UI/UX principles. I enjoy creating interactive experiences, experimenting 
-              with modern frontend tooling, and leveraging AI-assisted workflows to rapidly build 
-              and iterate on new ideas. I'm a quick learner and I'm always looking to improve my skills.
+              I'm Sean, a passionate full-stack developer with a strong focus on user experience. I was born in Missouri, USA; raised in Pell City, Alabama.
+              I graduated from the University of Alabama at Birmingham in December 2023 with a B.A. in Computer Science and a minor in Design/Photography. 
             </p>
             <p className="font-body text-base text-muted leading-relaxed mb-8">
-              I care deeply about the details — I build with the end user in mind.
+              If I wasn't busy — I'd be hiking.
             </p>
 
             <div className="flex flex-col gap-3">
               {[
-                { label: 'Approach', value: 'Clean code · Strong UX · Fast' },
-                { label: 'Workflow', value: 'Vite · React · TypeScript · AI-Assisted' },
-                { label: 'Interests', value: 'Crypto · Animations · Attack on Titan' },
+                { label: 'Hobbies', value: 'Fortnite · Memecoins · Anime · Weight Lifting · Running' },
+                { label: 'Fav. Food', value: "Pizza · Sushi · K-BBQ · McDonald's" },
+                { label: 'Fun Facts', value: "I'm Engaged · I have two cats · I'm learning Mandarin" },
               ].map((item) => (
                 <div key={item.label} className="flex gap-4 items-start">
                   <span className="font-mono text-xs text-muted pt-0.5 w-20 shrink-0">{item.label}</span>
