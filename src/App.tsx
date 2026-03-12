@@ -50,6 +50,21 @@ function LoadingScreen({ onDone }: { onDone: () => void }) {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      if (typeof window === 'undefined') return;
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
 
   return (
     <div className="relative bg-bg min-h-screen noise-overlay">
@@ -59,7 +74,7 @@ export default function App() {
 
       {!loading && (
         <>
-          <CustomCursor />
+          {!isMobile && <CustomCursor />}
           <AnimatedBackground />
           <ScrollProgress />
           <div className="scan-line" />
