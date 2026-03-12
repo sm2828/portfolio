@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 'collabroom',
     title: 'CollabRoom',
-    description: 'A real-time collaborative room where users can draw, play games, watch YouTube, leave notes, and interact together on a shared canvas. Built for genuine human connection through shared digital spaces.',
+    description: 'A real-time collaborative room where users can draw, play games, watch YouTube, leave notes, and interact together on a shared canvas. Built for genuine human connection through shared digital spaces. (Currently under development)',
     url: 'https://collabroom-psi.vercel.app',
     stack: ['React', 'JavaScript', 'Firebase', 'React Markdown'],
     featured: true,
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     id: 'bogged',
     title: 'Bogged',
-    description: 'A sleek interactive meme site with heavy UI animation and modern design. A showcase of motion design, creative UI engineering, and interactive frontend development pushed to its limits.',
+    description: 'A sleek interactive meme site with heavy UI animation and modern design. A showcase of motion design, creative UI engineering, and interactive frontend development.',
     url: 'https://www.bogged.world',
     stack: ['Vite', 'React', 'TypeScript', 'Tailwind', 'Reactbits'],
     featured: false,
@@ -64,16 +64,18 @@ export const projects: Project[] = [
 
 export const skills = [
   { name: 'React', level: 95 },
-  { name: 'TypeScript', level: 88 },
-  { name: 'JavaScript', level: 95 },
+  { name: 'TypeScript', level: 100 },
+  { name: 'JavaScript', level: 90 },
+  { name: 'Ai Utilization', level: 100 },
   { name: 'Node.js', level: 80 },
   { name: 'Firebase', level: 85 },
   { name: 'Supabase', level: 82 },
   { name: 'REST APIs', level: 90 },
-  { name: 'Git', level: 88 },
+  { name: 'Git', level: 100 },
   { name: 'API Integration', level: 90 },
-  { name: 'UI Design', level: 85 },
+  { name: 'UI Design', level: 100 },
+  { name: 'User Experience', level: 100 },
   { name: 'TailwindCSS', level: 92 },
-  { name: 'Technical Docs', level: 80 },
+  { name: 'Technical Docs', level: 88 },
   { name: 'Python', level: 94 },
 ];

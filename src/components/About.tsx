@@ -35,11 +35,10 @@ export default function About() {
               I'm a full-stack developer focused on building modern web applications with strong 
               UI/UX principles. I enjoy creating interactive experiences, experimenting 
               with modern frontend tooling, and leveraging AI-assisted workflows to rapidly build 
-              and iterate on new ideas.
+              and iterate on new ideas. I'm a quick learner and I'm always looking to improve my skills.
             </p>
             <p className="font-body text-base text-muted leading-relaxed mb-8">
-              I care deeply about the details — I believe the best software is built at the intersection of clean 
-              engineering and thoughtful design.
+              I care deeply about the details — I build with the end user in mind.
             </p>
 
             <div className="flex flex-col gap-3">

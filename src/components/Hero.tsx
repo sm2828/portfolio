@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
-const words = ['React.', 'TypeScript.', 'Firebase.', 'learning.', 'building.', 'Solana.', 'Supabase.', 'AI.', 'memes.'];
+const words = ['React.', 'cats.', 'coffee.', 'anime.','learning.', 'TypeScript.', 'designing.', 'building.', 'Solana.', 'Supabase.', 'AI.', 'memes.', 'crypto.', 'Fortnite.', 'Python.', 'Attack on Titan.', 'effeciency.', 'clean code.'];
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);

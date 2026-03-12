@@ -33,7 +33,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <p className="font-body text-xl text-text/70 leading-relaxed mb-8 max-w-md">
-              I'm currently looking for a full-time position as a full-stack developer or freelance work. 
+              I'm currently looking for a full-time position as a full-stack developer or anything that fits my skillset. 
               <br />
               <br />
               Drop me a message — I respond very quickly.
