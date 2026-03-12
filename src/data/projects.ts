@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 'collabroom',
     title: 'CollabRoom',
-    description: 'A real-time collaborative room where users can draw, play games, watch YouTube, leave notes, and interact together on a shared canvas. Built for genuine human connection through shared digital spaces. (Currently under development)',
+    description: 'Real-time collaborative room where users can draw, play games, watch YouTube, leave notes, and interact together on a shared canvas. (Currently under development)',
     url: 'https://collabroom-psi.vercel.app',
     stack: ['React', 'JavaScript', 'Firebase', 'React Markdown'],
     featured: true,
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     id: 'bogged',
     title: 'Bogged',
-    description: 'A sleek interactive meme site with heavy UI animation and modern design. A showcase of motion design, creative UI engineering, and interactive frontend development.',
+    description: 'Sleek interactive meme site with heavy UI animation and modern design. A showcase of my design skills, creative UI, and an interactive frontend.',
     url: 'https://www.bogged.world',
     stack: ['Vite', 'React', 'TypeScript', 'Tailwind', 'Reactbits'],
     featured: false,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     id: 'global-gmonads',
     title: 'Global Gmonads',
-    description: 'A global community map that lets users place location pins while maintaining optional anonymity. Connecting communities across the world with privacy-first architecture.',
+    description: 'Global community map that lets users place location pins. Connecting the monad community from across the world with anonymous options available.',
     url: 'https://global-gmonads.vercel.app',
     stack: ['Supabase', 'React', 'TypeScript', 'Vite'],
     featured: false,
@@ -51,13 +51,13 @@ export const projects: Project[] = [
   {
     id: 'nft-display',
     title: 'NFT Display',
-    description: 'A dashboard that pulls NFTs from a wallet address and lets users crop images and build custom collages. Bridging blockchain data with a clean, visual interface.',
+    description: 'A dashboard that pulls NFTs from a wallet address on Monad Testnet and lets users crop images and build custom collages.',
     url: 'https://nft-display-psi.vercel.app',
     stack: ['React', 'Alchemy API', 'Vite', 'CSS'],
     featured: false,
     accent: '#f5a623',
     accent2: '#d63af9',
-    category: 'Frontend · Web3',
+    category: 'Full Stack · Web3',
     year: '2025',
   },
 ];
