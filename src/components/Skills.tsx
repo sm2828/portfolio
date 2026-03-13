@@ -1,20 +1,74 @@
 import { motion } from 'framer-motion';
-import { skills } from '../data/projects';
+import type { IconType } from 'react-icons';
+import {
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiFirebase,
+  SiSupabase,
+  SiGit,
+  SiPython,
+} from 'react-icons/si';
+import { FiCloud, FiShare2, FiFileText, FiCpu } from 'react-icons/fi';
 
-const skillColors: Record<string, string> = {
-  'React': '#00f5ff',
-  'TypeScript': '#3178c6',
-  'JavaScript': '#f7df1e',
-  'Node.js': '#68a063',
-  'Firebase': '#ff9900',
-  'Supabase': '#3ecf8e',
-  'REST APIs': '#7b2fff',
-  'Git': '#f05032',
-  'API Integration': '#00f5ff',
-  'UI Design': '#ff2d78',
-  'TailwindCSS': '#38bdf8',
-  'Technical Docs': '#94a3b8',
+type SkillItem = {
+  name: string;
+  icon: IconType;
 };
+
+type SkillCategory = {
+  name: string;
+  accent: string;
+  skills: SkillItem[];
+};
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    accent: '#00f5ff',
+    skills: [
+      { name: 'React', icon: SiReact },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'TailwindCSS', icon: SiTailwindcss },
+    ],
+  },
+  {
+    name: 'Backend',
+    accent: '#7b2fff',
+    skills: [
+      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'REST APIs', icon: FiCloud },
+      { name: 'API Integration', icon: FiShare2 },
+    ],
+  },
+  {
+    name: 'Backend Services',
+    accent: '#3ecf8e',
+    skills: [
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'Supabase', icon: SiSupabase },
+    ],
+  },
+  {
+    name: 'Development',
+    accent: '#f05032',
+    skills: [
+      { name: 'Git', icon: SiGit },
+      { name: 'Technical Documentation', icon: FiFileText },
+    ],
+  },
+  {
+    name: 'Other',
+    accent: '#ff2d78',
+    skills: [
+      { name: 'Python', icon: SiPython },
+      { name: 'AI-Assisted Development', icon: FiCpu },
+    ],
+  },
+];
 
 export default function Skills() {
   return (
@@ -37,90 +91,53 @@ export default function Skills() {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left: Skill bars */}
-          <div className="space-y-5">
-            {skills.map((skill, i) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-mono text-sm text-text">{skill.name}</span>
-                  <span className="font-mono text-xs text-muted">{skill.level}%</span>
-                </div>
-                <div className="h-px bg-white/5 relative overflow-visible">
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: i * 0.05 + 0.3, ease: [0.16, 1, 0.3, 1] }}
-                    style={{
-                      transformOrigin: 'left',
-                      width: `${skill.level}%`,
-                      height: '1px',
-                      backgroundColor: skillColors[skill.name] || '#00f5ff',
-                    }}
-                  />
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: i * 0.05 + 1.2 }}
-                    style={{
-                      position: 'absolute',
-                      top: -3,
-                      left: `${skill.level}%`,
-                      width: 7,
-                      height: 7,
-                      borderRadius: '50%',
-                      backgroundColor: skillColors[skill.name] || '#00f5ff',
-                      transform: 'translateX(-50%)',
-                    }}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Right: Skill tags */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative flex flex-wrap gap-3 content-start"
-          >
-            {skills.map((skill, i) => (
-              <motion.div
-                key={skill.name}
-                whileHover={{ scale: 1.1, y: -4 }}
-                className="relative group cursor-default"
-                data-hover
-              >
-                <div
-                  className="px-4 py-2 glass border transition-all duration-300"
-                  style={{
-                    borderColor: `${skillColors[skill.name] || '#00f5ff'}30`,
-                  }}
-                >
-                  <span
-                    className="font-mono text-xs relative z-10"
-                    style={{ color: skillColors[skill.name] || '#00f5ff' }}
-                  >
-                    {skill.name}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-
-            {/* Decorative lines */}
-            <div className="absolute -right-8 top-1/2 w-px h-32 bg-gradient-to-b from-transparent via-accent/20 to-transparent hidden lg:block" />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8"
+        >
+          {skillCategories.map((category, idx) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 + idx * 0.05 }}
+              className="glass border border-white/5 p-5 flex flex-col gap-4"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <h3 className="font-mono text-xs tracking-[0.2em] uppercase text-muted">
+                  {category.name}
+                </h3>
+                <span
+                  className="w-2 h-2 rounded-full"
+                  style={{ backgroundColor: category.accent }}
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => {
+                  const Icon = skill.icon;
+                  return (
+                    <div
+                      key={skill.name}
+                      className="group inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-accent/40 transition-all duration-200"
+                      data-hover
+                    >
+                      <span className="text-accent/80 group-hover:text-accent">
+                        <Icon size={14} />
+                      </span>
+                      <span className="font-mono text-[11px] text-muted group-hover:text-text">
+                        {skill.name}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export const projects: Project[] = [
   {
     id: 'collabroom',
     title: 'CollabRoom',
-    description: 'Real-time collaborative room where users can draw, play games, watch YouTube, leave notes, and interact together on a shared canvas. (Currently under development)',
+    description: 'Hang out. (Currently under development)',
     url: 'https://collabroom-psi.vercel.app',
     stack: ['React', 'JavaScript', 'Firebase', 'React Markdown'],
     featured: true,
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   {
     id: 'bogged',
     title: 'Bogged',
-    description: 'Sleek interactive meme site with heavy UI animation and modern design. A showcase of my design skills, creative UI, and an interactive frontend.',
+    description: 'Meme website.',
     url: 'https://www.bogged.world',
     stack: ['Vite', 'React', 'TypeScript', 'Tailwind', 'Reactbits'],
     featured: false,
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     id: 'global-gmonads',
     title: 'Global Gmonads',
-    description: 'Global community map that lets users place location pins. Connecting the monad community from across the world with anonymous options available.',
+    description: 'Global community map.',
     url: 'https://global-gmonads.vercel.app',
     stack: ['Supabase', 'React', 'TypeScript', 'Vite'],
     featured: false,
@@ -51,7 +51,7 @@ export const projects: Project[] = [
   {
     id: 'the-gallery',
     title: 'The Gallery',
-    description: 'A dashboard that pulls NFTs from a wallet address on Monad Testnet and lets users crop images and build custom collages.',
+    description: 'Pull NFT data from Monad testnet.',
     url: 'https://nft-display-psi.vercel.app',
     stack: ['React', 'Alchemy API', 'Vite', 'CSS'],
     featured: false,
@@ -66,7 +66,7 @@ export const skills = [
   { name: 'React', level: 95 },
   { name: 'TypeScript', level: 100 },
   { name: 'JavaScript', level: 90 },
-  { name: 'Ai Utilization', level: 100 },
+  { name: 'AI-Assisted Development', level: 100 },
   { name: 'Node.js', level: 80 },
   { name: 'Firebase', level: 85 },
   { name: 'Supabase', level: 82 },
@@ -76,6 +76,6 @@ export const skills = [
   { name: 'UI Design', level: 100 },
   { name: 'User Experience', level: 100 },
   { name: 'TailwindCSS', level: 92 },
-  { name: 'Technical Docs', level: 88 },
+  { name: 'Technical Documentation', level: 88 },
   { name: 'Python', level: 94 },
 ];
