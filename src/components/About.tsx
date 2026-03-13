@@ -82,9 +82,9 @@ export default function About() {
                 </div>
                 <p className="text-muted mt-2">$ <span className="text-text">git log --oneline</span></p>
                 <div className="text-text/60 space-y-1 text-xs">
-                  <p><span className="text-accent2">a3f2b1c</span> feat: CollabRoom real-time canvas</p>
-                  <p><span className="text-accent2">7d9e4f2</span> feat: global community map</p>
-                  <p><span className="text-accent2">2c8a1e5</span> feat: NFT display dashboard</p>
+                  <p><span className="text-accent2">a3f2b1c</span> feat: CollabRoom</p>
+                  <p><span className="text-accent2">7d9e4f2</span> feat: Global Gmonads</p>
+                  <p><span className="text-accent2">2c8a1e5</span> feat: The Gallery</p>
                 </div>
                 <p className="text-muted mt-2">$ <span className="cursor-blink text-text">▊</span></p>
               </div>

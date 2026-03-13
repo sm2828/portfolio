@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import CustomCursor from './components/CustomCursor';
 import AnimatedBackground from './components/AnimatedBackground';
 import ScrollProgress from './components/ScrollProgress';
 import Nav from './components/Nav';
@@ -50,21 +49,6 @@ function LoadingScreen({ onDone }: { onDone: () => void }) {
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      if (typeof window === 'undefined') return;
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkIsMobile);
-    };
-  }, []);
 
   return (
     <div className="relative bg-bg min-h-screen noise-overlay">
@@ -74,7 +58,6 @@ export default function App() {
 
       {!loading && (
         <>
-          {!isMobile && <CustomCursor />}
           <AnimatedBackground />
           <ScrollProgress />
           <Nav />

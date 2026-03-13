@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
+import { FaTelegramPlane } from "react-icons/fa";
+import { Mail, Linkedin, Twitter, ArrowUpRight, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -76,16 +77,32 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-hover
-                className="group flex items-center gap-4 p-5 glass border border-white/5 hover:border-accent2/30 transition-all duration-300"
+                className="group flex items-center gap-4 p-5 glass border border-white/5 hover:border-sky-400/30 transition-all duration-300"
               >
-                <div className="p-2.5 border border-white/10 group-hover:border-accent2/30 text-muted group-hover:text-accent2 transition-all duration-300">
+                <div className="p-2.5 border border-white/10 group-hover:border-sky-400/30 text-muted group-hover:text-sky-400 transition-all duration-300">
                   <Twitter size={16} />
                 </div>
                 <div>
                   <p className="font-mono text-xs text-muted mb-0.5">X</p>
-                  <p className="font-body text-sm text-text group-hover:text-accent2 transition-colors">x.com/monadbull</p>
+                  <p className="font-body text-sm text-text group-hover:text-sky-400 transition-colors">x.com/monadbull</p>
                 </div>
-                <ArrowUpRight size={14} className="ml-auto text-muted group-hover:text-accent2 transition-colors" />
+                <ArrowUpRight size={14} className="ml-auto text-muted group-hover:text-sky-400 transition-colors" />
+              </a>
+              <a
+                href="https://t.me/monadbull"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-hover
+                className="group flex items-center gap-4 p-5 glass border border-white/5 hover:border-emerald-400/30 transition-all duration-300"
+              >
+                <div className="p-2.5 border border-white/10 group-hover:border-emerald-400/30 text-muted group-hover:text-emerald-400 transition-all duration-300">
+                  <Send size={16} />
+                </div>
+                <div>
+                  <p className="font-mono text-xs text-muted mb-0.5">Telegram</p>
+                  <p className="font-body text-sm text-text group-hover:text-emerald-400 transition-colors">@monadbull</p>
+                </div>
+                <ArrowUpRight size={14} className="ml-auto text-muted group-hover:text-emerald-400 transition-colors" />
               </a>
 
             </div>
