@@ -3,9 +3,6 @@ import { motion } from 'framer-motion';
 export default function About() {
   return (
     <section id="about" className="relative py-32 px-6 overflow-hidden">
-      {/* Left glow */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -61,7 +58,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="glass rounded-sm overflow-hidden glow-cyan">
+            <div className="glass rounded-sm overflow-hidden">
               {/* Terminal header */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
                 <div className="w-3 h-3 rounded-full bg-red-500/60" />

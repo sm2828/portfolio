@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnimatedBackground from './components/AnimatedBackground';
 import ScrollProgress from './components/ScrollProgress';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
@@ -58,7 +57,6 @@ export default function App() {
 
       {!loading && (
         <>
-          <AnimatedBackground />
           <ScrollProgress />
           <Nav />
           <main>

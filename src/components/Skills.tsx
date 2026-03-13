@@ -19,9 +19,6 @@ const skillColors: Record<string, string> = {
 export default function Skills() {
   return (
     <section id="skills" className="relative py-32 px-6 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent2/5 blur-[120px] rounded-full pointer-events-none" />
-
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -68,7 +65,6 @@ export default function Skills() {
                       backgroundColor: skillColors[skill.name] || '#00f5ff',
                     }}
                   />
-                  {/* Glow dot at end */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -82,7 +78,6 @@ export default function Skills() {
                       height: 7,
                       borderRadius: '50%',
                       backgroundColor: skillColors[skill.name] || '#00f5ff',
-                      boxShadow: `0 0 8px ${skillColors[skill.name] || '#00f5ff'}`,
                       transform: 'translateX(-50%)',
                     }}
                   />
@@ -91,7 +86,7 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Right: Floating skill tags cloud */}
+          {/* Right: Skill tags */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -102,15 +97,6 @@ export default function Skills() {
             {skills.map((skill, i) => (
               <motion.div
                 key={skill.name}
-                animate={{
-                  y: [0, -4 + (i % 3) * 3, 0],
-                }}
-                transition={{
-                  duration: 3 + (i % 4) * 0.5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: i * 0.2,
-                }}
                 whileHover={{ scale: 1.1, y: -4 }}
                 className="relative group cursor-default"
                 data-hover
@@ -121,12 +107,6 @@ export default function Skills() {
                     borderColor: `${skillColors[skill.name] || '#00f5ff'}30`,
                   }}
                 >
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      background: `radial-gradient(circle at center, ${skillColors[skill.name] || '#00f5ff'}15, transparent)`,
-                    }}
-                  />
                   <span
                     className="font-mono text-xs relative z-10"
                     style={{ color: skillColors[skill.name] || '#00f5ff' }}

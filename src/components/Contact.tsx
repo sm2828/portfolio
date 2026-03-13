@@ -5,9 +5,6 @@ import { Mail, Linkedin, Twitter, ArrowUpRight, Send } from 'lucide-react';
 export default function Contact() {
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      {/* Center glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px] pointer-events-none" />
-
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
