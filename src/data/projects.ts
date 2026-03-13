@@ -49,8 +49,8 @@ export const projects: Project[] = [
     year: '2025',
   },
   {
-    id: 'nft-display',
-    title: 'NFT Display',
+    id: 'the-gallery',
+    title: 'The Gallery',
     description: 'A dashboard that pulls NFTs from a wallet address on Monad Testnet and lets users crop images and build custom collages.',
     url: 'https://nft-display-psi.vercel.app',
     stack: ['React', 'Alchemy API', 'Vite', 'CSS'],

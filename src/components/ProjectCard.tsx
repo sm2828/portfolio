@@ -99,26 +99,6 @@ export default function ProjectCard({ project, index }: Props) {
           {project.description}
         </p>
 
-        {/* Featured extra visual */}
-        {isFeatured && (
-          <div className="mb-6 p-4 border border-white/5 rounded-sm bg-white/[0.02] relative overflow-hidden">
-            <div className="flex gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-red-500/60" />
-              <div className="w-2 h-2 rounded-full bg-yellow-500/60" />
-              <div className="w-2 h-2 rounded-full bg-green-500/60" />
-            </div>
-            <div className="font-mono text-xs text-muted space-y-1">
-              <p><span className="text-accent">const</span> <span className="text-text">room</span> = <span className="text-accent2">await</span> CollabRoom.<span className="text-green-400">create</span>{'()'}</p>
-              <p><span className="text-accent">await</span> room.<span className="text-green-400">connect</span>{'({ realtime: true })'}</p>
-              <p className="text-muted/60">{'// users connected: 🟢🟢🟢🟢'}</p>
-            </div>
-            <div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-              style={{ background: `linear-gradient(135deg, ${project.accent}05, transparent)` }}
-            />
-          </div>
-        )}
-
         {/* Stack pills */}
         <div className="flex flex-wrap gap-2">
           {project.stack.map((tech) => (
